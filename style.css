@@ -268,7 +268,6 @@ body {
 .btn:hover {
     background: #333;
 }
-
 @media (max-width: 768px) {
     html {
         font-size: 50% !important;
@@ -278,48 +277,43 @@ body {
         display: none;
     }
 
+    .header .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        padding: 2rem;
+        z-index: 1000;
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
     .home .slide {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
+        flex-direction: column-reverse !important;
+        text-align: center;
+        gap: 2rem;
     }
 
     .home .slide .content h3 {
-        font-size: 2.5rem !important;
+        font-size: 4rem !important;
     }
 
     .home .slide .image img {
-        max-width: 100% !important;
-        height: 25rem !important;
+        height: 30rem !important;
+        width: auto !important;
     }
 
-    .offers .box-container {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 1rem !important;
-    }
-
-    .offer-box {
-        flex-direction: column !important;
-        text-align: center !important;
-    }
-
-    .offer-box img {
-        width: 8rem !important;
-        height: 8rem !important;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-auto-rows: 15rem !important;
-        gap: 1rem !important;
-    }
-
-    .gallery-grid .large {
-        grid-column: 1 / span 2 !important;
-        grid-row: 1 / span 1 !important;
-    }
-
+    .offers .box-container,
     .footer .box-container {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
     }
 }
