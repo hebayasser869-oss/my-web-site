@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Store - Heba Yasser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo">Core <i class="fas fa-shopping-basket"></i></a>
+    <form action="" class="search-form">
+        <input type="search" placeholder="Search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+    <div class="icons">
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        <div id="bars-btn" class="fas fa-bars"></div>
+    </div>
+</header>
+
+<section class="home">
+    <div class="slide">
+        <div class="content">
+            <span>New Arrivals</span>
+            <h3>Flexible Chair</h3>
+            <p>Experience the perfect blend of comfort and modern design with our latest collection.</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+        <div class="image">
+            <img src="images/image6.jpg" id="main-slider-img" alt="">
+        </div>
+    </div>
+    <div id="prev-slide" class="fas fa-angle-left" onclick="prev()"></div>
+    <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+</section>
+
+<section class="offers">
+    <div class="box-container">
+        <div class="offer-box">
+            <div class="content"><span>Limited Offer</span><h3>Upto 50% Off</h3><a href="#" class="btn">Shop Now</a></div>
+            <img src="images/image15.jpg" alt="">
+        </div>
+        <div class="offer-box">
+            <div class="content"><span>Limited Offer</span><h3>Upto 50% Off</h3><a href="#" class="btn">Shop Now</a></div>
+            <img src="images/image38.jpg" alt="">
+        </div>
+        <div class="offer-box">
+            <div class="content"><span>Limited Offer</span><h3>Upto 50% Off</h3><a href="#" class="btn">Shop Now</a></div>
+            <img src="images/image13.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="gallery">
+    <div class="gallery-grid">
+        <div class="box large"><img src="images/image2.jpg" alt=""></div>
+        <div class="box"><img src="images/image1.jpg" alt=""></div>
+        <div class="box"><img src="images/image3.jpg" alt=""></div>
+        <div class="box"><img src="images/image4.jpg" alt=""></div>
+        <div class="box"><img src="images/image5.jpg" alt=""></div>
+        <div class="box"><img src="images/image9.jpg" alt=""></div>
+        <div class="box"><img src="images/image7.jpg" alt=""></div>
+        <div class="box"><img src="images/image16.jpg" alt=""></div>
+        <div class="box"><img src="images/image10.jpg" alt=""></div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Extra Links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> My Order </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> My Wishlist </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> My Account </a>
+        </div>
+        <div class="box">
+            <h3>Contact Links</h3>
+            <a href="https://github.com/" target="_blank"> <i class="fas fa-arrow-right"></i> GitHub </a>
+            <a href="https://linkedin.com/" target="_blank"> <i class="fas fa-arrow-right"></i> LinkedIn </a>
+            <a href="https://behance.net/" target="_blank"> <i class="fas fa-arrow-right"></i> Behance </a>
+        </div>
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Shop </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> About </a>
+        </div>
+        <div class="box">
+            <h3>Newsletter</h3>
+            <input type="email" placeholder="Enter Email" class="email">
+            <input type="submit" value="Submit" class="btn">
+        </div>
+    </div>
+    <div class="credit"> Designed and Encoded By <span>Heba Yasser</span> </div>
+</footer>
+
+<script>
+    let currentImage = 6;
+    function next(){
+        currentImage = currentImage >= 63 ? 1 : currentImage + 1;
+        document.getElementById('main-slider-img').src = `images/image${currentImage}.jpg`;
+    }
+    function prev(){
+        currentImage = currentImage <= 1 ? 63 : currentImage - 1;
+        document.getElementById('main-slider-img').src = `images/image${currentImage}.jpg`;
+    }
+</script>
+
+</body>
+</html>

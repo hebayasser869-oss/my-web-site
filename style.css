@@ -1,0 +1,141 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    transition: all .3s ease;
+    border: none; outline: none;
+}
+
+html { font-size: 62.5%; overflow-x: hidden; scroll-behavior: smooth; }
+body { background: #faf8f5; }
+
+.header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.5rem 7%; background: #fff; position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.05);
+}
+
+.header .logo { font-size: 2.5rem; color: #444; font-weight: 800; }
+.header .logo i { color: #a67c52; margin-left: .5rem; }
+
+.header .search-form {
+    width: 45rem; height: 4.5rem; background: #f3efea;
+    display: flex; align-items: center; border-radius: 5rem; padding: 0 2rem;
+}
+
+.header .search-form input { width: 100%; background: transparent; font-size: 1.5rem; color: #444; }
+.header .search-form label { font-size: 1.8rem; color: #a67c52; cursor: pointer; }
+.header .icons div { font-size: 2.2rem; margin-left: 2rem; color: #666; cursor: pointer; }
+
+.home {
+    min-height: 85vh;
+    background: #f7f3f0;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.home .slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.home .slide .content {
+    flex: 0 0 45rem;
+    text-align: left;
+}
+
+.home .slide .content span { font-size: 2rem; color: #a67c52; }
+.home .slide .content h3 { font-size: 5rem; color: #333; padding: 1rem 0; }
+.home .slide .image {
+    flex: 1;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2rem;
+} 
+
+.home .slide .image img {
+    max-width: 55rem;
+    max-height: 45rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+.home .slide .image img {
+    max-width: 55rem;
+    max-height: 45rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+    max-width: 50rem;
+    max-height: 45rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+    z-index: 1;
+}
+
+.home .slide .image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+    max-height: 40rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin-left: auto;
+}
+
+.home .slide .image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#prev-slide, #next-slide {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    height: 5rem; width: 5rem; line-height: 5rem; border: .1rem solid #333;
+    background: #fff; color: #333; font-size: 2rem; cursor: pointer; text-align: center;
+    z-index: 10;
+}
+#prev-slide:hover, #next-slide:hover { background: #a67c52; color: #fff; border-color: #a67c52; }
+#prev-slide { left: 2rem; } #next-slide { right: 2rem; }
+
+.offers { padding: 5rem 7%; }
+.offers .box-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); gap: 2rem;
+}
+.offer-box { background: #ede8e3; display: flex; align-items: center; padding: 2rem; border-radius: .8rem; }
+.offer-box img { width: 13rem; height: 13rem; object-fit: contain; }
+
+.gallery { padding: 2rem 7%; }
+.gallery-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 20rem; gap: 1.5rem;
+}
+.gallery-grid .box { border-radius: .5rem; overflow: hidden; }
+.gallery-grid .box img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-grid .box img:hover { transform: scale(1.1); }
+.gallery-grid .large { grid-column: 1 / span 2; grid-row: 1 / span 2; height: 100%; }
+
+.footer { background: #f3efea; padding: 5rem 7%; }
+.footer .box-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 2rem; }
+.footer .box h3 { font-size: 2.2rem; color: #333; padding: 1rem 0; }
+.footer .box a { display: block; font-size: 1.5rem; color: #666; padding: 1rem 0; }
+.footer .box a i { color: #a67c52; padding-right: .5rem; }
+.footer .box .email { width: 100%; padding: 1.2rem; font-size: 1.5rem; border: .1rem solid #ccc; margin: 1rem 0; border-radius: .5rem; }
+.footer .credit { text-align: center; padding: 2rem; margin-top: 2rem; border-top: .1rem solid #ccc; font-size: 2rem; color: #333; }
+.footer .credit span { color: #a67c52; }
+
+.btn { display: inline-block; margin-top: 1rem; padding: .8rem 2.5rem; background: #a67c52; color: #fff; font-size: 1.5rem; border-radius: .5rem; cursor: pointer; }
+.btn:hover { background: #333; }
