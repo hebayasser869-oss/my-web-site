@@ -279,34 +279,47 @@ body {
     }
 
     .home .slide {
-        flex-direction: column-reverse !important;
-        text-align: center;
-    }
-
-    .home .slide .content {
-        flex: auto;
-        margin-top: 2rem;
-        width: 100%;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
     }
 
     .home .slide .content h3 {
-        font-size: 3.5rem !important;
+        font-size: 2.5rem !important;
     }
 
     .home .slide .image img {
-        max-width: 80% !important;
-        height: auto !important;
+        max-width: 100% !important;
+        height: 25rem !important;
+    }
+
+    .offers .box-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .offer-box {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .offer-box img {
+        width: 8rem !important;
+        height: 8rem !important;
     }
 
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr) !important;
+        grid-auto-rows: 15rem !important;
+        gap: 1rem !important;
     }
 
     .gallery-grid .large {
         grid-column: 1 / span 2 !important;
+        grid-row: 1 / span 1 !important;
     }
 
     .footer .box-container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
